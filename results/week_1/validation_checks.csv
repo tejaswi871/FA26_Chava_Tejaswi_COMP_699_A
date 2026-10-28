@@ -1,0 +1,12 @@
+check,passed
+unique_job_ids,True
+unique_resume_ids,True
+nonempty_text,True
+no_missing_values,True
+unique_pairs,True
+complete_pairs,True
+valid_references,True
+valid_grades,True
+finite_bounded_scores,True
+self_similarity,True
+unknown_text_zero,True
