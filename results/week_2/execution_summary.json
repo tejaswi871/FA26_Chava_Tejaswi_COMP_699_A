@@ -1,0 +1,47 @@
+{
+  "jobs": 3,
+  "resumes": 18,
+  "pairs": 54,
+  "methods": [
+    "lexical",
+    "semantic",
+    "hybrid"
+  ],
+  "model_id": "Xenova/all-MiniLM-L6-v2",
+  "model_revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "input_sha256": {
+    "added_scenarios.csv": "7901ab113f9c7763324fd53f3af5081d7eb98e36245444acbba42cf3ce73c934",
+    "jobs.csv": "0c6a566e10d693fd9553528de76c76bf3fca23439de0855c94d76bb790689d3a",
+    "relevance_labels.csv": "4c6d16c9668d19a7ddd4636ebd8c4f20f5d62eba10545d8862c70d53f39f3108",
+    "resumes.csv": "835637d8b695880e131293679f1a7e22dbd59de36523459b5964ab915e4de5fa"
+  },
+  "model_sha256": {
+    "model.onnx": "759c3cd2b7fe7e93933ad23c4c9181b7396442a2ed746ec7c1d46192c469c46e",
+    "tokenizer.json": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+  },
+  "truncated_texts": 0,
+  "lexical_seconds": 0.001996555999994598,
+  "semantic_seconds_including_session_load": 0.6974464140000691,
+  "protocol": {
+    "lexical_weight": 0.5,
+    "semantic_weight": 0.5,
+    "k": 3,
+    "relevant_threshold": 1,
+    "gain": "2**grade-1",
+    "tie_break": "resume_id ascending lexicographically",
+    "tuning": "none",
+    "model_id": "Xenova/all-MiniLM-L6-v2",
+    "model_revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+    "model_file": "onnx/model.onnx",
+    "max_tokens": 256
+  },
+  "seed": "not applicable: no sampling, training or tuning; deterministic CPU inference and fixed inputs",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "onnxruntime": "1.31.1",
+    "tokenizers": "0.23.3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "procedure": "Two executions with identical frozen inputs and model on this CPU environment",
+  "byte_identical_rankings_and_metrics": true,
+  "sha256": {
+    "rankings.csv": "63b74828a6d82f0115a1019bbe575659eaaaeac619bc70acce7a1d0357c112c4",
+    "metrics_by_job.csv": "4c4e57ddcee5d92a9d3c00cd72bf46b74d67745a2d41cac18f534283981ba83c",
+    "metrics_summary.csv": "b9699b09a800a63e8757769e7bfb5d5672bb507e9ad6403c9cdfd54625270dce",
+    "paired_comparison.csv": "2d1fd9a74b4c98a37a75ff76c89d1e3742b7f40c9fc65b1832c9bb34efbfffb5",
+    "top3_cases.csv": "706662baa4f5656f8c9421559db0053215a83ef2aad6e28d0abe8435668d9405"
+  },
+  "excluded": "execution times differ; reproducibility across different hardware is not guaranteed byte for byte"
+}

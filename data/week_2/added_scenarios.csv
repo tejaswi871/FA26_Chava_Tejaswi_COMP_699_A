@@ -1,0 +1,10 @@
+resume_id,scenario,intended_family,rationale
+R10,direct,J1,Substantial task/tool coverage
+R11,partial,J1,Partial task coverage
+R12,keyword_negative,none,Mentions target tools in nontechnical role; explicitly lacks task experience
+R13,direct,J2,Substantial task/tool coverage
+R14,partial,J2,Partial task coverage
+R15,keyword_negative,none,Mentions target tools in nontechnical role; explicitly lacks task experience
+R16,direct,J3,Substantial task/tool coverage
+R17,partial,J3,Partial task coverage
+R18,keyword_negative,none,Mentions target tools in nontechnical role; explicitly lacks task experience

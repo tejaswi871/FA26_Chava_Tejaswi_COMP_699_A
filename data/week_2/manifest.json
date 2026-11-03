@@ -1,0 +1,27 @@
+{
+  "rubric": {
+    "0": "No demonstrated relevant task coverage in the constructed scenario",
+    "1": "Partial task coverage",
+    "2": "Substantial intended task and tool coverage"
+  },
+  "provenance": "Week 1 fictional inputs preserved; nine new fictional examples added before Week 2 scoring. All labels are author-defined, not independent judgments.",
+  "protocol": {
+    "lexical_weight": 0.5,
+    "semantic_weight": 0.5,
+    "k": 3,
+    "relevant_threshold": 1,
+    "gain": "2**grade-1",
+    "tie_break": "resume_id ascending lexicographically",
+    "tuning": "none",
+    "model_id": "Xenova/all-MiniLM-L6-v2",
+    "model_revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+    "model_file": "onnx/model.onnx",
+    "max_tokens": 256
+  },
+  "sha256": {
+    "added_scenarios.csv": "7901ab113f9c7763324fd53f3af5081d7eb98e36245444acbba42cf3ce73c934",
+    "jobs.csv": "0c6a566e10d693fd9553528de76c76bf3fca23439de0855c94d76bb790689d3a",
+    "relevance_labels.csv": "4c6d16c9668d19a7ddd4636ebd8c4f20f5d62eba10545d8862c70d53f39f3108",
+    "resumes.csv": "835637d8b695880e131293679f1a7e22dbd59de36523459b5964ab915e4de5fa"
+  }
+}

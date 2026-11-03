@@ -1,0 +1,15 @@
+test_hybrid_endpoints (builtins.MethodTests.test_hybrid_endpoints) ... ok
+test_invalid_k (builtins.MethodTests.test_invalid_k) ... ok
+test_ndcg_known (builtins.MethodTests.test_ndcg_known) ... ok
+test_ndcg_perfect (builtins.MethodTests.test_ndcg_perfect) ... ok
+test_ndcg_zero (builtins.MethodTests.test_ndcg_zero) ... ok
+test_pool_padding (builtins.MethodTests.test_pool_padding) ... ok
+test_precision_known (builtins.MethodTests.test_precision_known) ... ok
+test_reference_ndcg (builtins.MethodTests.test_reference_ndcg) ... ok
+test_ties (builtins.MethodTests.test_ties) ... ok
+test_unknown_vocabulary (builtins.MethodTests.test_unknown_vocabulary) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.005s
+
+OK
