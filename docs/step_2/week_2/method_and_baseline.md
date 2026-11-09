@@ -4,7 +4,7 @@ Tejaswi Chava | Prepared November 3, 2026. Preliminary computational evidence; n
 
 ## 1. Research question and implemented method
 
-Does combining semantic similarity with lexical matching improve identification of relevant resume-job qualifications compared with lexical matching alone? The working hypothesis is that semantic information may help with differently worded qualifications. I implemented the comparison proposed in Week 1 and recorded its initial measurements.
+Does combining semantic similarity with lexical matching improve identification of relevant resume-job qualifications compared with lexical matching alone? The working hypothesis is that semantic information may help with differently worded qualifications. The Week 2 experiment records initial measurements for the comparison proposed in Week 1.
 
 The lexical baseline uses lowercase unigram TF-IDF with default tokenization and no stop-word removal. It fits the vocabulary and IDF weights on the fixed resume candidate collection only, transforms each job, and calculates cosine similarity. This follows the Week 1 method; scores are recomputed on the expanded collection, so they are not directly comparable with Week 1 scores.
 
@@ -12,7 +12,7 @@ The semantic method uses pretrained all-MiniLM-L6-v2 embeddings through the Xeno
 
 ## 2. Source notebook and responsible sections
 
-My implementation is in src/week1_resume_job_foundation.ipynb, immediately after the original Week 2 plan. The Week 2 sections are: 1. Extend and freeze my research inputs; 2. Obtain the fixed pretrained model; 3. Implement my scoring and evaluation methods; 4. Validate important calculations; 5. Execute the initial controlled comparison; and 6. Inspect the candidate-level results. These cells contain the complete code, followed by my recorded observations. src/requirements_week2.txt records dependencies. src/build_week2_report.py renders this report from computed measurements; it is not part of scoring.
+The Week 2 implementation follows the original plan in src/week1_resume_job_foundation.ipynb. Its six sections verify the frozen benchmark, obtain the pretrained model, define scoring and metrics, test the calculations, run the comparison, and inspect candidate rankings. Recorded observations follow the implementation. src/requirements_week2.txt records dependencies. src/build_week2_report.py renders this report from computed measurements; it is not part of scoring.
 
 ## 3. Reference conditions
 
@@ -32,7 +32,7 @@ There is no supervised train/test split because this experiment neither trains n
 
 ## 5. Reproduce the experiment
 
-From the repository root, create a Python 3.12 environment and install src/requirements_week2.txt. The first download requires internet and about 91 MB for model assets. Subsequent runs can use the cached assets offline. Model files are excluded from Git. The manifest contains the fixed protocol; do not regenerate inputs to tune results.
+From the repository root, create a Python 3.12 environment and install src/requirements_week2.txt. The first download requires internet and about 91 MB for model assets. Subsequent runs can use the cached assets offline. Model files are excluded from Git. The manifest records the fixed protocol and hashes of the committed inputs. To reconstruct the benchmark in a separate directory, run python src/export_week2_benchmark.py path/to/new-directory.
 
 ```bash
 python -m pip install -r src/requirements_week2.txt
@@ -42,7 +42,7 @@ python -m pip install -r src/requirements_week2.txt
 python src/build_week2_report.py
 ```
 
-After installing dependencies, open src/week1_resume_job_foundation.ipynb from the repository root or src directory, restart the Python kernel and run all cells from the beginning. The original Week 1 cells run first. The appended Week 2 cells prepare inputs, verify the pinned model, execute all ten tests, and generate the experiment outputs. The report-rendering command is optional and runs after the notebook.
+After installing dependencies, open src/week1_resume_job_foundation.ipynb from the repository root or src directory, restart the Python kernel and run all cells from the beginning. The original Week 1 cells run first. The appended Week 2 cells check the committed benchmark against its manifest, verify the pinned model, execute all ten tests, and generate the experiment outputs. The report-rendering command is optional and runs after the notebook.
 
 Results are saved under results/week_2/. Re-running overwrites generated outputs. execution_summary.json records exact runtime versions, protocol, input and model hashes, truncation count, and descriptive execution times. Timing is environment-dependent and is not used as a comparative research metric. reportlab is needed only for PDF generation; Jupyter is optional for the notebook.
 
@@ -58,7 +58,7 @@ Hybrid minus lexical macro NDCG@3 is +0.020481, while macro Precision@3 is uncha
 
 Semantic-only scoring has the highest averages. For J2 it ranks R4, R13 and the paraphrased R5 first, second and third, giving Precision@3 = 1 and NDCG@3 = 1. The hybrid instead retains grade-0 R15 at rank 3. This is evidence against assuming that a fixed blend must outperform the semantic component alone.
 
-The keyword-negative data-analysis resume R12 remains rank 2 for all three methods. The IT-support sales resume R18 remains rank 3 for all three. These failures show that semantic similarity can still reward topical overlap despite explicit statements of missing task experience. I did not change labels or weights after observing these results.
+The keyword-negative data-analysis resume R12 remains rank 2 for all three methods. The IT-support sales resume R18 remains rank 3 for all three. These failures show that semantic similarity can still reward topical overlap despite explicit statements of missing task experience. The comparison retained the original labels and weights.
 
 rankings.csv records every score and position. metrics_by_job.csv contains the nine method-job measurements. metrics_summary.csv contains the macro means. paired_comparison.csv records per-job differences, and top3_cases.csv identifies the examples supporting this interpretation. These are computed outputs, not predetermined demonstration values.
 

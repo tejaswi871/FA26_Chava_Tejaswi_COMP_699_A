@@ -1,9 +1,9 @@
-# Week 1 research progress
+# Week 1 Progress
 
-I generated 3 fictional job descriptions, 9 fictional resumes, and 27 labeled pairs. I assigned relevance grades before scoring: 2 for substantial intended task/tool coverage, 1 for partial coverage, and 0 for no relevant evidence in this constructed scenario.
+The benchmark contains 3 fictional job descriptions, 9 fictional resumes, and 27 labeled pairs. Grades were set before scoring. A grade of 2 indicates substantial task and tool coverage, 1 indicates partial coverage, and 0 indicates no relevant evidence in the scenario.
 
-I fitted unigram TF-IDF on resumes, transformed jobs using that vocabulary, and computed cosine similarities. I generated rankings with resume ID as the tie-breaker and saved inputs, labels, rankings, checks, and execution/environment summaries. The vocabulary contains 81 terms and all 11 checks passed.
+The lexical baseline fits unigram TF-IDF on resumes, transforms jobs using the same vocabulary, and ranks candidates by cosine similarity with resume ID as the tie-breaker. The run saved inputs, labels, rankings, checks, and environment details. The vocabulary contains 81 terms, and all 11 checks passed.
 
-Direct-wording candidates ranked first for each job. For J1, irrelevant R6 ranked above partial R3. I have not implemented semantic matching or comparative ranking metrics. My main limitations are the small synthetic sample, author-defined labels, simplified job families, generic words, and negation.
+Direct-wording candidates ranked first for each job. For J1, irrelevant R6 ranked above partially relevant R3. The small synthetic sample, author-defined labels, and simplified job families limit the comparison. Generic words and negation can also affect the rankings.
 
-Next I will expand and freeze the dataset and rubric, add a documented sentence-embedding model, specify hybrid weights, and implement validated Precision@K and NDCG comparisons. Any tuning will be separated from evaluation.
+The Week 2 plan adds a frozen benchmark, a pretrained sentence encoder, a fixed hybrid rule, and known-example tests for Precision@K and NDCG. Any later tuning uses separate development cases.
