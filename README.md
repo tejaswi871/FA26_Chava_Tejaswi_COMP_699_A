@@ -42,3 +42,12 @@ All 10 method tests passed. The hybrid improved NDCG@3 on one job and tied the l
 - `src/build_week2_report.py`: optional report renderer; run from any directory after results exist.
 
 The execution summary records the Python environment used to produce the saved outputs. Model weights are cached locally and excluded from Git. Next steps include expanding the benchmark and collecting independent relevance judgments before any tuning.
+
+## Week 3 preliminary evidence
+
+The cutoff analysis compares lexical, MiniLM semantic, and equal-weight hybrid rankings at K = 1, 3, and 5. It also traces the ranks of three keyword-heavy negative resumes across all jobs.
+
+Run `python src/run_week3_evidence.py` from the repository root to recreate the tables in `results/week_3/`. The script uses only the Python standard library. The notebook also contains an executable Week 3 section with the same analysis and recorded observations.
+
+- [Preliminary evidence report](docs/step_2/week_3/preliminary_evidence.pdf)
+- [Editable report](docs/step_2/week_3/preliminary_evidence.md)
