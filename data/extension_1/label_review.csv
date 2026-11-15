@@ -1,0 +1,10 @@
+job_id,resume_id,relevance,rationale,review_status
+J4,R19,2,Demonstrates scheduling inventory tracking and operational spreadsheet reporting,author_provisional
+J4,R20,1,Shows scheduling and spreadsheet exposure but lacks inventory and operations reporting,author_provisional
+J4,R21,0,Mentions relevant tools through sales but lacks operational task experience,author_provisional
+J5,R22,2,Demonstrates billing resolution customer inquiries and ticket documentation,author_provisional
+J5,R23,1,Shows customer interaction but lacks billing case and ticketing experience,author_provisional
+J5,R24,0,Describes selling support platforms rather than performing support tasks,author_provisional
+J6,R25,2,Demonstrates post creation campaign measurement and promotional writing,author_provisional
+J6,R26,1,Shows content creation but lacks engagement analysis,author_provisional
+J6,R27,0,Mentions analytics products without performing campaign work,author_provisional
