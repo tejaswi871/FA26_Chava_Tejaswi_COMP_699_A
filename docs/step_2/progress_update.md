@@ -1,32 +1,34 @@
-# Coursework Progress Update — Dataset and Evidence Review
+# Research Progress Update — Dataset and Evidence Review
 
 Tejaswi Chava | NLP-Based Resume–Job Alignment | COMP 699 A
 
 ## Dataset expansion (Task 1)
 
-Added a separate synthetic extension at data/extension_1 containing three additional job descriptions, nine additional resumes, and 27 relevance pairs. The examples cover operations coordination, customer support, and marketing assistance. Each family includes a direct match, a partial match, and a keyword-heavy negative example. The Week 2 frozen benchmark (three jobs, eighteen resumes, 54 pairs) remains untouched.
+Extended the research dataset in data/extension_1 with three job descriptions, nine resume profiles, and 27 resume–job relevance pairs. The additional examples cover operations coordination, customer support, and marketing assistance. Each job family includes strong, partial, and keyword-overlap cases. The original Week 2 benchmark (three jobs, eighteen resumes, 54 pairs) remains unchanged to preserve the existing evaluation results.
 
-## Relevance-label refinement (Task 2)
+## Resume–job relevance labels (Task 2)
 
-Retained the Week 2 grading rubric (0 = no task coverage, 1 = partial, 2 = substantial). The new label_review.csv records the rationale for the nine central constructed cases. Cross-domain pairs are graded zero because the written resumes do not demonstrate the target job's tasks. These are provisional author judgments, not independent reviewer assessments. Independent validation remains a limitation, not a completed activity.
+Applied the existing relevance rubric: 0 for no demonstrated task coverage, 1 for partial task coverage, and 2 for substantial task and tool coverage. The label_review.csv file records the rationale for nine representative cases. Other cross-domain pairs receive grade 0 because their profiles do not demonstrate the target job's tasks. The labels are based on the constructed examples; independent assessment has not yet been conducted.
 
-## Ranking-error review (Task 5)
+## Ranking-error analysis (Task 5)
 
-The previously recorded Week 3 experiment identified keyword-heavy negative cases. For J1, R12 (sales of software, without hands-on analysis) ranked second under lexical, semantic, and hybrid methods. For J3, R18 (marketing equipment without troubleshooting experience) ranked third under all three methods. At K=3, keyword-negative appearances totaled 3 for lexical, 2 for semantic, and 3 for hybrid; at K=5, all three methods had 3. These observations are from the original frozen benchmark only.
+The Week 3 results identify cases in which technical terminology appears in resumes without evidence of the corresponding job duties. For J1, R12 ranked second under lexical, semantic, and hybrid matching despite describing software sales rather than hands-on data analysis. For J3, R18 ranked third under all three methods despite describing equipment marketing rather than technical troubleshooting.
 
-This suggests that topical word overlap can outrank evidence of actually performing the requested work. It does not establish the same behavior on real resumes or on the new extension. The new examples deliberately test similar ambiguities, but no new ranking experiment has yet been run.
+At K=3, keyword-negative appearances totaled 3 for lexical, 2 for semantic, and 3 for hybrid matching. At K=5, all three methods recorded 3. These results apply to the original benchmark. The new examples have not yet been scored.
 
-## Interpretation and limitations
+## Results and limitations
 
-On the original benchmark, semantic-only achieved the strongest macro NDCG@3 (0.823093), compared with lexical (0.724399) and the equal-weight hybrid (0.744880). The sample is small and synthetic, relevance judgments are author-assigned, and the ranking cutoffs reuse the same candidates. Results are descriptive rather than generalizable. Expanding the dataset increases coverage but does not by itself improve the validity of the measured model performance.
+On the original benchmark, macro NDCG@3 was 0.724399 for lexical matching, 0.823093 for semantic matching, and 0.744880 for equal-weight hybrid matching. Semantic matching produced the highest value on this dataset. The benchmark uses a small number of synthetic job descriptions and author-assigned relevance labels, limiting conclusions beyond the evaluated examples.
 
-## Reproducibility and next step
+## Reproducibility and next experiment
 
-Original results remain in results/week_2 and results/week_3; rerun the existing Week 3 analysis with python src/run_week3_evidence.py. The new extension is intentionally separate. The next modest coursework experiment is to score the extension with the existing three methods, report the same ranking metrics, and document whether the previously observed error patterns recur. No new model or application architecture is required.
+The original evaluation outputs remain in results/week_2 and results/week_3. The existing cutoff analysis can be reproduced with `python src/run_week3_evidence.py`. The dataset extension is stored separately to preserve the original benchmark.
 
-## Task tracking
+The next experiment is to evaluate the additional resume–job pairs with the existing lexical, semantic, and hybrid methods, compare ranking metrics, and examine whether the previously observed ranking errors also appear in the expanded dataset.
 
-Task 1 — Expanded sample dataset: completed as a separate, unscored extension.
-Task 2 — Refined relevance labels: completed for documented author-provisional grading; independent validation not performed.
-Task 5 — Document ranking errors and limitations: completed for existing recorded evidence; extension results not yet available.
-Task 7 — Repository documentation: updated with this progress note and dataset documentation.
+## Progress status
+
+Task 1 — Extend research dataset: completed.
+Task 2 — Refine resume–job relevance labels: completed for the new examples; independent assessment pending.
+Task 5 — Analyze ranking errors and limitations: completed for the existing experimental results.
+Task 7 — Update research documentation: completed for this stage.
