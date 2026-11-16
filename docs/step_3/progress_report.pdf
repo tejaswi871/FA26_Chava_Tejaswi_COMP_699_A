@@ -1,0 +1,78 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 5941 >>
+stream
+BT /F2 13 Tf 46 752 Td (Step 3 Weekly Research Progress Report) Tj ET
+BT /F1 7.4 Tf 46 732 Td (Project: NLP-Based Resume-Job Alignment Using Lexical and Semantic Matching) Tj ET
+BT /F1 7.4 Tf 46 718.4 Td (Student: Tejaswi Chava  |  Course: COMP 699 A  |  Reporting Period: November 12-16, 2026) Tj ET
+BT /F2 9 Tf 46 699.8 Td (1. Reporting Period and Baseline) Tj ET
+BT /F1 7.4 Tf 46 685.8 Td (At the conclusion of the Step 2 Week 3 milestone on November 11, the research had established a reproducible) Tj ET
+BT /F1 7.4 Tf 46 675.1999999999999 Td (comparison of TF-IDF lexical matching, MiniLM semantic matching, and an equal-weight hybrid approach. The benchmark) Tj ET
+BT /F1 7.4 Tf 46 664.5999999999999 Td (contained three synthetic job descriptions, eighteen resumes, and 54 graded relevance pairs. Preliminary evaluation) Tj ET
+BT /F1 7.4 Tf 46 653.9999999999999 Td (showed that semantic-only matching achieved the highest Precision@3 \(0.7778\) and NDCG@3 \(0.8231\), while the) Tj ET
+BT /F1 7.4 Tf 46 643.3999999999999 Td (equal-weight hybrid achieved 0.6667 and 0.7449, respectively. The next research activities focused on expanding the) Tj ET
+BT /F1 7.4 Tf 46 632.7999999999998 Td (evaluation data and examining alternative lexical-semantic weighting configurations.) Tj ET
+BT /F2 9 Tf 46 614.1999999999998 Td (2. Work Completed This Week) Tj ET
+BT /F1 7.4 Tf 46 600.1999999999998 Td (The research dataset was extended with three additional job descriptions covering operations coordination, customer) Tj ET
+BT /F1 7.4 Tf 46 589.5999999999998 Td (service, and marketing assistance, along with nine synthetic resumes and 27 relevance pairs. Relevance labels were) Tj ET
+BT /F1 7.4 Tf 46 578.9999999999998 Td (reviewed and documented with supporting rationales, although independent validation remains pending. The original) Tj ET
+BT /F1 7.4 Tf 46 568.3999999999997 Td (benchmark was preserved separately to maintain reproducibility. Additional experiments examined lexical-semantic) Tj ET
+BT /F1 7.4 Tf 46 557.7999999999997 Td (weighting configurations of 30:70, 50:50, and 70:30 using previously recorded TF-IDF and MiniLM similarity scores. A) Tj ET
+BT /F1 7.4 Tf 46 547.1999999999997 Td (reproducible Python analysis script was added to calculate Precision@3 and NDCG@3 for each configuration and produce) Tj ET
+BT /F1 7.4 Tf 46 536.5999999999997 Td (per-job comparisons. Research documentation was also updated to consolidate existing findings, methodological) Tj ET
+BT /F1 7.4 Tf 46 525.9999999999997 Td (limitations, and remaining evaluation tasks.) Tj ET
+BT /F2 9 Tf 46 507.39999999999964 Td (3. New Evidence and Findings) Tj ET
+BT /F1 7.4 Tf 46 493.39999999999964 Td (The weighting comparison showed that the 30:70 and 50:50 configurations produced identical macro Precision@3 \(0.6667\)) Tj ET
+BT /F1 7.4 Tf 46 482.7999999999996 Td (and NDCG@3 \(0.7449\). Increasing the lexical contribution to 70% reduced NDCG@3 to 0.7244 without improving precision.) Tj ET
+BT /F1 7.4 Tf 46 472.1999999999996 Td (Semantic-only matching remained the strongest reference, with Precision@3 of 0.7778 and NDCG@3 of 0.8231. These) Tj ET
+BT /F1 7.4 Tf 46 461.59999999999957 Td (findings indicate that increasing lexical weight did not improve ranking effectiveness on the existing benchmark.) Tj ET
+BT /F1 7.4 Tf 46 450.99999999999955 Td (However, the comparison is exploratory because it reuses the original three-job dataset rather than an independent) Tj ET
+BT /F1 7.4 Tf 46 440.3999999999995 Td (evaluation set. The expanded dataset has been prepared but not yet scored, so no performance claims are made for the) Tj ET
+BT /F1 7.4 Tf 46 429.7999999999995 Td (additional cases.) Tj ET
+BT /F2 9 Tf 46 411.1999999999995 Td (4. GitHub Repository Changes) Tj ET
+BT /F1 7.4 Tf 46 397.1999999999995 Td (Repository: https://github.com/tejaswi871/FA26_Chava_Tejaswi_COMP_699_A | Branch: main. The November 15 commits) Tj ET
+BT /F1 7.4 Tf 46 386.59999999999945 Td (introduced the expanded research dataset, provisional relevance-label review, and supporting documentation under) Tj ET
+BT /F1 7.4 Tf 46 375.99999999999943 Td (data/extension_1/ and docs/step_2/. The November 16 commits added weighting comparison results under) Tj ET
+BT /F1 7.4 Tf 46 365.3999999999994 Td (results/weight_comparison/ and the reproducible analysis script src/run_weight_comparison.py \(f4a0107\). Additional) Tj ET
+BT /F1 7.4 Tf 46 354.7999999999994 Td (commits consolidated Step 2 research documentation \(b28d1a4\) and recorded the remaining expanded-dataset evaluation) Tj ET
+BT /F1 7.4 Tf 46 344.19999999999936 Td (requirements \(514e365\). These changes establish traceable comparisons, preserve the original benchmark, and) Tj ET
+BT /F1 7.4 Tf 46 333.59999999999934 Td (distinguish completed analysis from pending experiments.) Tj ET
+BT /F2 9 Tf 46 314.9999999999993 Td (5. Problems and Next Steps) Tj ET
+BT /F1 7.4 Tf 46 300.9999999999993 Td (The primary limitations are the small synthetic benchmark, author-assigned relevance judgments, and continued) Tj ET
+BT /F1 7.4 Tf 46 290.3999999999993 Td (sensitivity to misleading keyword overlap. The alternative weights were evaluated on previously recorded scores, and) Tj ET
+BT /F1 7.4 Tf 46 279.7999999999993 Td (the additional dataset still requires computational evaluation. During the following week, the research will: \(1\)) Tj ET
+BT /F1 7.4 Tf 46 269.19999999999925 Td (compute lexical, semantic, and hybrid rankings for the expanded dataset; \(2\) compare Precision@3, NDCG@3, and) Tj ET
+BT /F1 7.4 Tf 46 258.5999999999992 Td (representative ranking errors against the existing baseline; and \(3\) document findings and limitations while reviewing) Tj ET
+BT /F1 7.4 Tf 46 247.99999999999923 Td (relevance labels for consistency. Expected outputs are reproducible ranking files, comparative evaluation tables, and) Tj ET
+BT /F1 7.4 Tf 46 237.39999999999924 Td (an updated research evidence summary.) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+6388
+%%EOF
